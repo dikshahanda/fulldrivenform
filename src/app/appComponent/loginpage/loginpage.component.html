@@ -1,0 +1,35 @@
+<!--ring div starts here-->
+<div class="body">
+<div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+    <form #logininfo="ngForm" (ngSubmit)="onClick(logininfo)">
+      <div class="login">
+        <h2>Login</h2>
+        <div class="inputBx">
+          <input type="email" placeholder="Username" ngModel name="email" required>
+        </div>
+        <div class="inputBx">
+          <input type="password" placeholder="Password" ngModel name="password" required>
+        </div>
+        <div class="inputBx">
+          <button type="submit"  [disabled]="logininfo.invalid">
+          <span><div class="spinner-border text-light" role="status" *ngIf="OnLoad">
+            <!-- <span class="sr-only" ></span> -->
+          </div></span><span  *ngIf="!OnLoad" >Sign In
+          </span></button>
+        </div>
+        
+        <div class="links">
+          <a href="#">Forget Password</a>
+          <a href="#">Signup</a>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--ring div ends here-->
+  </div>
+
+
+  
